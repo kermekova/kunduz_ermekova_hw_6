@@ -1,7 +1,7 @@
 public class Skeleton extends Boss{
    private int arrows;
 
-   public Skeleton(String name, int health, int damage, Weapon weapon, int i){
+   public Skeleton(String name, int health, int damage, Weapon weapon, int arrows){
        super(name,health,damage,weapon);
        this.arrows = arrows;
    }
@@ -15,8 +15,9 @@ public class Skeleton extends Boss{
     }
 
     @Override
-    public void printInfo() {
-        super.printInfo();
-        System.out.println("Запасы: " + arrows);
+    public String printInfo() {
+       return
+        super.printInfo()+
+        " Запасы: " + arrows;
     }
 }

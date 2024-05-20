@@ -14,10 +14,11 @@ public class Boss extends GameEntity{
        this.weapon = weapon;
    }
 
-   public void printInfo() {
-       System.out.println("Босс: " + getName());
-       System.out.println("Количество жизней: " + getHealth());
-       System.out.println("Урон: " + getDamage());
-       System.out.println("Тип оружия: " + getWeapon());
+   public String printInfo() {
+       return
+       "Имя: " +  getName()+
+       " Количество жизней: " + getHealth()+
+       " Урон: " + getDamage()+
+       " Тип оружия: " + weapon.getWeaponName();
    }
 }

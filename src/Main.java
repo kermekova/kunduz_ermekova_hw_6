@@ -1,15 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        Weapon skeletonWeapon = new Weapon(WeaponType.ARTILLERY, "Ружье" );
-
-        Boss skeletonBoss = new Skeleton("Генерал", 280, 50, skeletonWeapon, 100);
-
-        skeletonBoss.printInfo();
-
-        Weapon anotherSkeletonWeapon = new Weapon(WeaponType.CHEMICAL_WEAPONRY, "Ядовитый газ");
-        Boss anotherSkeletonBoss = new Skeleton("Химик", 200, 60, anotherSkeletonWeapon, 40);
-
-        anotherSkeletonBoss.printInfo();
-
+        Skeleton skeletonWeapon = new Skeleton ("Генерал", 280, 50, new Weapon(WeaponType.ARTILLERY, "Ружье"), 100);
+        Skeleton skeletonWeapon2 = new Skeleton ("Химик", 250, 70, new Weapon(WeaponType.CHEMICAL_WEAPONRY, "Газ"), 70);
+        Weapon bossWeapon = new Weapon(WeaponType.ARTILLERY, "Ружье");
+        Boss skeletonBoss = new Boss("Босс", 230, 40, bossWeapon);
+        System.out.println(skeletonBoss.printInfo());
+        System.out.println(skeletonWeapon.printInfo());
+        System.out.println(skeletonWeapon2.printInfo());
     }
 }
